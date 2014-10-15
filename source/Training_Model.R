@@ -7,7 +7,7 @@ doc_matrix<-create_matrix(data$title,language = "english", removeNumbers = TRUE,
                           , removeSparseTerms = .998)
 
 
-container<-create_container(doc_matrix, data$code, trainSize = 1:300, testSize = 301:400, virgin = F)
+container<-create_container(doc_matrix, data$code, trainSize = 1:1000, testSize = 1001:1500, virgin = F)
 
 RF<-train_model(container, "RF")
 SLDA<-train_model(container, "SLDA")
